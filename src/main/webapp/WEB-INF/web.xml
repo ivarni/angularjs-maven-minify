@@ -1,0 +1,13 @@
+<web-app>
+
+	<servlet>
+		<servlet-name>randomServlet</servlet-name>
+		<servlet-class>com.ivarnilsen.servlet.RandomServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>randomServlet</servlet-name>
+		<url-pattern>rest/*</url-pattern>
+	</servlet-mapping>	
+
+</web-app>

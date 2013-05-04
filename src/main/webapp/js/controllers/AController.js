@@ -1,0 +1,3 @@
+AController = function($scope) {
+
+}

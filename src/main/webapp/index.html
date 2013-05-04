@@ -1,0 +1,27 @@
+<html ng-app="minify">
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/external/bootstrap.min.css">
+
+        <script src="js/external/jquery-2.0.0.min.js"></script>
+        <script src="js/external/angular.min.js"></script>
+        <script src="js/external/bootstrap.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/controllers/Controller.js"></script>
+        <script src="js/controllers/AController.js"></script>
+        <script src="js/controllers/BController.js"></script>
+    </head>
+    <body>
+
+        <div class="navbar" ng-controller="Controller">
+            <div class="navbar-inner">
+                <ul class="nav">
+                    <li ng-repeat="item in menuItems" ng-class="active(item)">
+                        <a href="#{{item.link}}">{{item.text}}</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div ng-view></div>
+    </body>
+</html>

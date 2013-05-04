@@ -6,8 +6,12 @@ angular
     $routeProvider.otherwise({ redirectTo: '/' });
 })
 .run(function($rootScope, $http) {
+        $rootScope.setup = {
+            color: '#ffffff'
+        };
+
     $http.get('/rest/foo').success(function(data) {
-        $rootScope.color = data.color;
+        $rootScope.setup.color =  data.color;
         $rootScope.ready = true;
     });
 });

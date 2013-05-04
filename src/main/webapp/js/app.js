@@ -8,5 +8,6 @@ angular
 .run(function($rootScope, $http) {
     $http.get('/rest/foo').success(function(data) {
         $rootScope.color = data.color;
+        $rootScope.ready = true;
     });
 });

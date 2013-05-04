@@ -13,6 +13,11 @@ public class RandomServlet extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 			throws ServletException, IOException {
+		try {
+			//hurr durr i'm a slow backend servurr
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+		}
 		resp.setContentType("application/json");
 		PrintWriter writer = resp.getWriter();
 		Integer value = (int) Math.floor(Math.random() * Integer.parseInt("FFFFFF", 16));

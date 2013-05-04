@@ -7,7 +7,7 @@
 
 	<servlet-mapping>
 		<servlet-name>randomServlet</servlet-name>
-		<url-pattern>rest/*</url-pattern>
+		<url-pattern>/rest/color</url-pattern>
 	</servlet-mapping>	
 
 </web-app>

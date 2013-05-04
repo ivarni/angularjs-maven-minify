@@ -10,7 +10,7 @@ angular
             color: '#ffffff'
         };
 
-    $http.get('/rest/foo').success(function(data) {
+    $http.get('rest/color').success(function(data) {
         $rootScope.setup.color =  data.color;
         $rootScope.ready = true;
     });

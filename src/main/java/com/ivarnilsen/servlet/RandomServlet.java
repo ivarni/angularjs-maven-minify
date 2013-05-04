@@ -15,7 +15,8 @@ public class RandomServlet extends HttpServlet {
 			throws ServletException, IOException {
 		resp.setContentType("application/json");
 		PrintWriter writer = resp.getWriter();
-		Double value = Math.random() * 100;
-		writer.append(String.format("{\"value\":\"%s\"}", value.toString()));
+		Integer value = (int) Math.floor(Math.random() * Integer.parseInt("FFFFFF", 16));
+		String hexString = Integer.toHexString(value);
+		writer.append(String.format("{\"color\":\"#%s\"}", ("000000" + hexString).substring(hexString.length())));
 	}
 }

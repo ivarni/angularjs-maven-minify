@@ -1,7 +1,7 @@
-var resolveFunc = function($http) {
-    return $http.get('rest/color');
+var resolveFunc = function(colorService) {
+    return colorService.get();
 }
-resolveFunc.$inject = ['$http'];
+resolveFunc.$inject = ['colorService'];
 
 angular
 .module('minify', [])
@@ -10,14 +10,14 @@ angular
         templateUrl: 'templates/template_a.html', 
         controller: 'AController',
         resolve: {
-            serverData: resolveFunc
+            color: resolveFunc
         }
     });
     $routeProvider.when('/b', { 
         templateUrl: 'templates/template_b.html', 
         controller: 'BController',
         resolve: {
-            serverData: resolveFunc
+            color: resolveFunc
         }        
     });
     $routeProvider.when('/', { 

@@ -1,5 +1,5 @@
 angular.module('minify')
-.controller('AController', ['$scope', 'serverData', function(scope, serverData) {
+.controller('AController', ['$scope', 'color', function(scope, color) {
     scope.text = 'Page A';
-    scope.color = serverData.data.color;
+    scope.color = color;
 }]);

@@ -10,14 +10,14 @@ angular
         templateUrl: 'templates/template_a.html', 
         controller: 'AController',
         resolve: {
-            color: resolveFunc
+            serverData: resolveFunc
         }
     });
     $routeProvider.when('/b', { 
         templateUrl: 'templates/template_b.html', 
         controller: 'BController',
         resolve: {
-            color: resolveFunc
+            serverData: resolveFunc
         }        
     });
     $routeProvider.when('/', { 

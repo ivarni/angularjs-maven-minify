@@ -54,8 +54,8 @@
                         <configuration>
                             <nosuffix>true</nosuffix>
                             <excludes>
-                                <exclude>**/external/*.js</exclude>
-                                <exclude>**/external/*.css</exclude>
+                                <exclude>**/external/js/*.js</exclude>
+                                <exclude>**/external/css/*.css</exclude>
                             </excludes>
                         </configuration>
                     </plugin>

@@ -27,6 +27,6 @@
         $routeProvider.otherwise({ redirectTo: '/' });
     }])
     .run(['colorService', function(colorService) {
-        //force the service to be initialized so server data can be fetched eagerly.
+        colorService.init();
     }]);
 })();

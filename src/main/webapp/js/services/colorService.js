@@ -1,4 +1,4 @@
-angular.module('minify')
+angular.module('minifyServices', [])
 .service('colorService',['$q', '$http', function($q, $http) {
     var colorPromise = $q.defer();
     $http.get('rest/color')

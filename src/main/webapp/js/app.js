@@ -5,7 +5,7 @@
     resolveFunc.$inject = ['colorService'];
 
     angular
-    .module('minify', [])
+    .module('minify', ['minifyServices'])
     .config(['$routeProvider', function($routeProvider) {
         $routeProvider.when('/a', { 
             templateUrl: 'templates/template_a.html', 
